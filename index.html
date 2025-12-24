@@ -2,10 +2,109 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Merry Christmas Thúy Hừn</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background: radial-gradient(circle at top, #1a1a1a, #000);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      /* Header */
+      .header {
+        position: relative;
+        margin-top: 25px;
+        width: 100%;
+        text-align: center;
+        z-index: 10;
+      }
+      .header h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 50px;
+        color: #ffcc70;
+        letter-spacing: 4px;
+        text-shadow: 0 0 12px #ffb347, 0 0 30px #ff8c00;
+        margin: 0;
+      }
+      .header span {
+        font-family: "Great Vibes", cursive;
+        font-size: 40px;
+        color: #ffd98a;
+        text-shadow: 0 0 12px rgba(255, 215, 140, 0.9);
+      }
+
+      canvas {
+        display: block;
+        margin-top: 20px;
+        z-index: 2;
+      }
+
+      .icon {
+        position: absolute;
+        font-size: 32px;
+        filter: drop-shadow(0 0 10px gold);
+        pointer-events: none;
+        z-index: 6;
+        animation: swingAround 6s ease-in-out infinite alternate;
+      }
+
+      @keyframes swingAround {
+        0% { transform: translate(0, 0) rotate(-10deg); }
+        50% { transform: translate(40px, -25px) rotate(15deg); }
+        100% { transform: translate(-40px, 20px) rotate(-10deg); }
+      }
+
+      /* ✨ Chữ chúc mừng và ảnh chuyển động cùng */
+      .floating-item {
+        position: absolute;
+        font-family: "Great Vibes", cursive;
+        font-size: 26px; /* Dùng cho chữ */
+        color: #ffffff;
+        text-shadow: 0 0 15px #ffcc70;
+        pointer-events: none;
+        z-index: 5;
+        white-space: nowrap;
+        animation: flyUp 8s linear forwards;
+        display: flex; /* Để căn giữa chữ và ảnh */
+        align-items: center;
+      }
+      .floating-item img {
+        width: 40px; /* Kích thước ảnh */
+        height: 40px;
+        margin: 0 10px; /* Khoảng cách giữa ảnh và chữ */
+        filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.7)); /* Hiệu ứng tỏa sáng */
+      }
+      @keyframes flyUp {
+        0% { transform: translateY(0); opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { transform: translateY(-250px); opacity: 0; }
+      }
+
+      .snowflake {
+        position: absolute;
+        color: #fff;
+        pointer-events: none;
+        z-index: 1;
+        top: -20px;
+        animation: fall linear infinite;
+      }
+      @keyframes fall {
+        to { transform: translateY(105vh); }
+      }
+    </style>
   </head>
+
   <body>
-    hahakakaj
-  </body>
-</html>
+    
